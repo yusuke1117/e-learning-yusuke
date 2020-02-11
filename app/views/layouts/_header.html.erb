@@ -8,22 +8,29 @@
             <li class="nav-item active">
                 <a class="nav-link text-secondary" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
-             <li class="nav-item text-secondary">
-                <%= link_to "login", login_path, class: "nav-link text-secondary" %>
+
+            <% if logged_in? %>
+               <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle text-secondary" data-toggle="dropdown">
+                    <%= "Setting" %> <b class="caret"></b>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li><%= link_to "profile", current_user, class: "dropdown-item" %></li>
+                        <li><%= link_to "settings", edit_user_path(current_user), class: "dropdown-item" %></li>
+                        <li class="divider"></li>
+                        <li>
+                            <%= link_to "Sign out", logout_path, method: :delete, class: "dropdown-item" %>
+                        </li>
+                    </ul>
+                </li>
+            <% else %>  
+            <li class="nav-item">
+                <%= link_to "Signup", signup_path, class: "nav-link text-secondary" %>    
             </li>
-            <li class="nav-item text-secondary">
-                <%= link_to "signup", signup_path, class: "nav-link text-secondary" %>
+            <li class="nav-item">
+                <%= link_to "Login", login_path, class: "nav-link text-secondary" %>
             </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle text-secondary" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown link
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                    <a class="dropdown-item" href="#">Profile</a>
-                    <a class="dropdown-item" href="#">Setting</a>
-                    
-                </div>
-            </li>
+            <% end %>
         </ul>
     </div>
 </nav>

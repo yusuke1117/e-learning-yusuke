@@ -1,0 +1,15 @@
+<div class="container-fluid pt-4 loginbg">
+    <div class="container logingamen">
+    <h1 class="text-center text-white">Login</h1>
+        <%= form_for(:sessions, url: sessions_new_path) do |f| %>
+            <%= f.label :email, class: "text-white" %>
+            <%= f.text_field :email, class: "form-control" %>
+
+            <%= f.label :password, class: "text-white" %>
+            <%= f.password_field :password, class: "form-control" %>
+
+            <%= f.submit "Login", class: "btn btn-block btn-primary mt-4" %>
+        <% end %>
+        <p class="text-white">New user? <%= link_to "Sign up now!", signup_path %></p>
+    </div>
+</div>

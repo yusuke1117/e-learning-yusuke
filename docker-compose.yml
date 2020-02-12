@@ -6,7 +6,7 @@ services:
       - "4406:3306"
     restart: always
     environment:
-      - MYSQL_DATABASE=e-learning_yusuke_db
+      - MYSQL_DATABASE=e-learning-yusuke_db
       - MYSQL_ROOT_PASSWORD=password
     volumes:
       - ./data:/var/lib/mysql:rw

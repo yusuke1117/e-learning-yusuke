@@ -1,5 +1,12 @@
 @import "bootstrap";
 
+.navbar{
+  background-color: black;
+}
+
+.footer {
+  background-color: black;
+}
 
 .friends {
   background: url(friends.jpeg);
@@ -61,3 +68,83 @@
   width: 100%;
 
 }
+
+// admin //
+.btn-flat-simple {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #ECECEC;
+  background: #000000;
+  transition: .4s;
+}
+
+.btn-flat-simple:hover {
+  background: #ECECEC;
+  color:  #000000;
+}
+
+.admingamen {
+  width: 450px;
+  padding : 20px;
+  font-family: 'Varela Round', sans-serif;
+  border-radius: 15px;
+  border : solid 3px;
+  border-color: #000000;  
+}
+
+.adminbg {
+  background: url(new.jpeg);
+  background-size: cover;
+  height: 95vh;
+  width: 100%;
+
+}
+
+.description{
+  height: 60px;
+}
+
+// index //
+.btn-flat-simple {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #ECECEC;
+  background: #000000;
+  transition: .4s;
+}
+
+.btn-flat-simple:hover {
+  background: #ECECEC;
+  color:  #000000;
+}
+
+.indexgamen {
+  width: 450px;
+  height: 150px;
+  padding : 20px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.indexbg {
+  background: url(new.jpeg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+
+}
+
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+

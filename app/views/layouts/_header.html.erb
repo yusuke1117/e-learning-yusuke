@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+<nav class="navbar navbar-expand-lg fixed-top navbar-light">
     <a class="navbar-brand text-secondary" href="#">Navbar</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -20,6 +20,9 @@
                         <li class="divider"></li>
                         <li>
                             <%= link_to "Sign out", logout_path, method: :delete, class: "dropdown-item" %>
+                        </li>
+                        <li>
+                            <%= link_to "Manage Categories", admin_categories_path, class: "dropdown-item" %>
                         </li>
                     </ul>
                 </li>

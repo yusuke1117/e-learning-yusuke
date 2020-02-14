@@ -11,9 +11,15 @@ class Admin::CategoriesController < ApplicationController
       render 'new'
     end
   end
+  
+  def index
+    # @categories = Category.all
+    @categories = Category.paginate(page: params[:page], per_page: 5)
+  end
 
   def show
   end
+
 
   private
   def category_params

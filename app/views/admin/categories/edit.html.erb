@@ -1,0 +1,17 @@
+<div class="container-fluid pt-4 adminbg">
+    <div class="d-flex align-content-center float-left flex-wrap  my-box-light" style="height: 40rem;">
+        <div class="container admingamen text-white">
+            <h1 class="text-center text-white">Edit Category</h1>
+            <%= form_for(:category, url: admin_categories_path) do |f| %>
+                <%= f.label :title %>
+                <%= f.text_field :title, class: "form-control" %>
+
+                <%= f.label :description %>
+                <%= f.text_field :description, class: "form-control"%>
+
+                <%= f.submit "Save changes", class: "btn btn-block btn-primary mt-4 btnwidth" %>
+            <% end %>
+            <%= link_to "<< Back", admin_categories_path, class: "aaa mt-4" %>
+        </div>
+    </div>
+</div>

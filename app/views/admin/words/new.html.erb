@@ -1,0 +1,24 @@
+<div class="container-fluid pt-5 wordbg text-white">
+    <div class="container pt-4 wordgamen text-white">
+        <%= form_for(:words, url: admin_words_path) do |f| %>
+            <%= f.label :word %>
+            <%= f.text_field :content, class: "form-control" %>
+            <div class="field">
+                <%= f.label :choices %>
+                <%= f.text_field :content, class: "form-control" %>
+                <%= f.check_box :is_correct %>
+            </div>
+            <div>
+                <%= f.text_field :content, class: "form-control" %>
+                <%= f.check_box :is_correct %>
+            </div>
+            <div>
+                <%= f.text_field :content, class: "form-control" %>
+                <%= f.check_box :is_correct %>
+            </div>
+            
+
+            <%= f.submit "Save changes", class: "btn btn-block btn-flat-simple mt-4 btnwidth" %>
+        <% end %>
+    </div>
+</div>

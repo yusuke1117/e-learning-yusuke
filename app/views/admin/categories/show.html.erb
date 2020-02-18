@@ -3,7 +3,7 @@
         <div class="container admingamen">
             <h3 class="text-center">Word</h3>
             <%= @category.title %>
-            <%= link_to "new word", new_admin_word_path, class: "btn btn-block btn-flat-simple mt-4" %>
+            <%= link_to "new word", new_admin_category_word_path(@category), class: "btn btn-block btn-flat-simple mt-4" %>
         </div>
     </div>    
 </div>

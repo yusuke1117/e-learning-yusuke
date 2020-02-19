@@ -19,6 +19,10 @@ class Admin::WordsController < ApplicationController
     #render a new page
   end
 
+  def edit
+    @word = Word.find(params[:id])
+  end
+
   def index
   end
   

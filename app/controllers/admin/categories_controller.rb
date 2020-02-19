@@ -37,6 +37,7 @@ class Admin::CategoriesController < ApplicationController
 
   def show
     @category = Category.find(params[:id])
+    @words = @category.words
   end
 
   private

@@ -1,0 +1,19 @@
+<div class="container-fluid pt-4 adminbg">
+    <div class="d-flex align-content-center float-left flex-wrap  my-box-light" style="height: 40rem;">
+        <div class="container admingamen">
+            <h1 class="text-center">Edit Category</h1>
+           <%= form_for([:admin, @category, @word]) do |f| %>
+                <%= render "shared/error_messages", object: @word %>
+                <%= f.label :word %>
+                <%= f.text_field :content, class: "form-control" %>
+                <%= f.label :choices %>
+                <%= f.fields_for :choices do |choice| %>
+                    <%= choice.text_field :content, class: "form-control" %>
+                    <%= choice.check_box :is_correct %>
+                <% end %>
+                <%= f.submit "Save changes", class: "btn btn-block btn-flat-simple mt-4 btnwidth" %>
+            <% end %>
+            <%= link_to "<< Back", admin_category_path, class: "aaa mt-4" %>
+        </div>
+    </div>
+</div>

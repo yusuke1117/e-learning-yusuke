@@ -1,0 +1,19 @@
+<div class="container-fluid pt-4">
+    <div class="container" style="width: 60%;">
+        <h1 class="text-center pt-5">Lesson</h1>
+        <div class="row">
+            <% @categories.each do |category| %>
+                <div class="col-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= category.title %></h5>
+                            <p class="card-text"><%= category.description %></p>
+                            <div class="text-right"><a href="#" class="btn btn-flat-simple">Go somewhere</a></div>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+        <div class="pagenate text-center"><%= will_paginate %></div>
+    </div>
+</div>

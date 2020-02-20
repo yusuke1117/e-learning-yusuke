@@ -2,15 +2,15 @@
     <div class="d-flex align-content-center float-left flex-wrap  my-box-light" style="height: 40rem;">
         <div class="container admingamen">
             <h3 class="text-center">New Category</h3>
-                <%= form_for(:category, url: admin_categories_path) do |f| %>
-                    <%= f.label :title, class: "" %>
-                    <%= f.text_field :title, class: "form-control" %>
+            <%= form_for(:category, url: admin_categories_path) do |f| %>
+                <%= f.label :title, class: "" %>
+                <%= f.text_field :title, class: "form-control" %>
 
-                    <%= f.label :description, class: "" %>
-                    <%= f.text_field :description, class: "form-control description" %>
+                <%= f.label :description, class: "" %>
+                <%= f.text_field :description, class: "form-control description" %>
 
-                    <%= f.submit "submit", class: "btn btn-block btn-flat-simple mt-4" %>
-                <% end %>
+                <%= f.submit "submit", class: "btn btn-block btn-flat-simple mt-4" %>
+            <% end %>
         </div>
     </div>    
 </div>

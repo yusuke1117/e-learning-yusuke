@@ -9,11 +9,12 @@ Rails.application.routes.draw do
   get '/signup', to:'users#new'
   get '/login', to:'sessions#new'
   delete '/logout', to: 'sessions#destroy'
+
+  resources :categories
   
   namespace :admin do
     resources :categories do
       resources :words
     end
   end
-  
 end

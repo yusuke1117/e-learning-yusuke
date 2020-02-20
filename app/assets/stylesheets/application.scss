@@ -1,5 +1,8 @@
 @import "bootstrap";
 
+.container{
+ font-family: 'Varela Round', sans-serif;
+}
 .navbar{
   background-color: black;
 }
@@ -173,4 +176,25 @@
   height: 150px;
   padding : 20px;
   font-family: 'Varela Round', sans-serif;
+}
+
+.pagenate {
+  nav{
+  display : inline-block;
+  color: #000000;
+  }
+  
+}
+
+
+.pagenation {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+
+}
+
+.card {
+  border: 3px solid rgba(0, 0, 0, 0.384);
+  border-radius: 0.8rem;
 }

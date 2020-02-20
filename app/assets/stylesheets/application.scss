@@ -127,6 +127,25 @@
   color:  #000000;
 }
 
+.btn-flat-simple-answer {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.25em;
+  text-decoration: none;
+  color: #ECECEC;
+  background: #000000;
+  transition: .4s;
+  width: 500px;
+  height: 50px;
+  font-size: 25px;
+}
+
+.btn-flat-simple-answer:hover {
+  background: #ECECEC;
+  color:  #000000;
+}
+
 .indexgamen {
   width: 450px;
   height: 150px;
@@ -197,4 +216,8 @@
 .card {
   border: 3px solid rgba(0, 0, 0, 0.384);
   border-radius: 0.8rem;
+}
+
+.answerpage {
+  margin-top: 10rem;
 }

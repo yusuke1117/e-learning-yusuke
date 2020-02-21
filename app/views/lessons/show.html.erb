@@ -1,0 +1,25 @@
+<div class="container mt-5">
+    <h1 class="text-center title_result"><%= @lesson.category.title %><%= @lesson.result %> of <%= @lesson.category.words.count %></h1>
+    <div class="row">
+        <div class="col-md-8 offset-md-2">
+            <table class="text-center table-responsive-md category_table_result table-striped border border-dark">   
+                <thead>
+                    <tr class="">
+                        <td>Word</td>
+                        <td>Your Answer</td>
+                        <td>correct Answer</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <% @lesson.answers.each do |answer| %>
+                        <tr>
+                            <td><%= answer.word.content %></td>
+                            <td><%= answer.choice.content %></td>
+                            <td><%= answer.word.correct_answer %></td>
+                        </tr>
+                    <% end %>
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

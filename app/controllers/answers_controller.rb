@@ -4,7 +4,8 @@ class AnswersController < ApplicationController
     @lesson = Lesson.find(params[:lesson_id])  
     @answer = Answer.new
     if @lesson.next_word.nil?
-      redirect_to lesson_url(@lesson)
+      @lesson.update(result: @lesson.lesson_result)
+      redirect_to lesson_url(@lesson) #in show page: @lesson.result
     end
   end
 

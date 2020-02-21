@@ -8,7 +8,8 @@
                         <div class="card-body">
                             <h5 class="card-title"><%= category.title %></h5>
                             <p class="card-text"><%= category.description %></p>
-                            <div class="text-right"><a href="/answers/new" class="btn btn-flat-simple">Start Lesson</a></div>
+                        <!-- <div class="text-right"><a href="/answers/new" class="btn btn-flat-simple">Start Lesson</a></div> -->
+                            <%= button_to "Start Lesson", lessons_path(category_id: category.id), class:"btn btn-flat-simple" %>
                         </div>
                     </div>
                 </div>

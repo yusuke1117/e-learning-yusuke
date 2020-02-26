@@ -42,9 +42,14 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 end
 
+# Faker
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+
 #adds pages with page numbers
 gem 'will_paginate', '~> 3.2', '>= 3.2.1'
 gem 'will_paginate-bootstrap4', '~> 0.2.2'
+
+gem 'font-awesome-rails'
 
 group :development do
   # Access an interactive console on exception pages or by calling 'console' anywhere in the code.

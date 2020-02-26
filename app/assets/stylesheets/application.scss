@@ -1,4 +1,5 @@
 @import "bootstrap";
+@import "font-awesome";
 
 .container{
  font-family: 'Varela Round', sans-serif;
@@ -238,4 +239,12 @@
 
 .title_result {
   margin-top: 10rem;
+}
+
+.icon{
+  font-size: 40px;
+  padding: 5px;
+}
+.btn{
+  float: right;
 }

@@ -1,0 +1,24 @@
+<div class="container-fluid pt-4">
+    <div class="container" style="width: 60%;">
+        <h1 class="text-center pt-5">List of Users</h1>
+        <div class="row">
+                <% @users.each do |user| %>
+                    <div class="col-6 mb-4">
+                        <div class="card">
+                            <div class="card-body">
+                                <% if user.avatar.url %>
+                                    <%= image_tag user.avatar.url, size: 52, class: "card-img" %>
+                                <% else %>
+                                    <i class="fa fa-user icon"></i>
+                                <% end %>
+                                <%= link_to user.name, user %>
+                                <%= link_to "follow", "#", class: "btn btn-primary text-right" %>
+                            </div>
+                        </div>
+                    </div>
+                <% end %>
+        </div>
+        <div class="pagenate text-center"><%= will_paginate %></div>
+    </div>
+</div>
+

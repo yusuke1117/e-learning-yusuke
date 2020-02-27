@@ -12,7 +12,7 @@
                                     <i class="fa fa-user icon"></i>
                                 <% end %>
                                 <%= link_to user.name, user %>
-                                <%= link_to "follow", "#", class: "btn btn-primary text-right" %>
+                                <%= render "follow_form", user: user %>
                             </div>
                         </div>
                     </div>

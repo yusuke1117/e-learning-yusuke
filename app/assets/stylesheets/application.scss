@@ -245,6 +245,36 @@
   font-size: 40px;
   padding: 5px;
 }
+
+.bigicon{
+  font-size: 100px;
+  padding: 5px;
+}
+
 .btn{
   float: right;
+}
+
+.profire {
+  margin-top: 50px;
+  font-family: 'Varela Round', sans-serif;
+  border-radius: 15px;
+  border : solid 3px;
+  border-color: #000000;  
+}
+
+.btn-flat-simple-dash {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #ECECEC;
+  background: #000000;
+  transition: .4s;
+}
+
+.btn-flat-simple-dash:hover {
+  background: #ECECEC;
+  color:  #000000;
 }

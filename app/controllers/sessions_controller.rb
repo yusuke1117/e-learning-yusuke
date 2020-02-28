@@ -7,7 +7,7 @@ class SessionsController < ApplicationController
 
     if user && user.authenticate(params[:sessions][:password])
       log_in user
-      redirect_to user #Goes to show page
+      redirect_to root_url #Goes to show page
     else
       render 'new'
     end

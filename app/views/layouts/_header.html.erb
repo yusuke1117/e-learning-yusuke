@@ -21,7 +21,7 @@
                     <%= "Setting" %> <b class="caret"></b>
                     </a>
                     <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <li><%= link_to "profile", edit_user_path(current_user), class: "dropdown-item" %></li>
+                        <li><%= link_to "profile", current_user, class: "dropdown-item" %></li>
                         <li><%= link_to "settings", edit_user_path(current_user), class: "dropdown-item" %></li>
                         <li class="divider"></li>
                         <li>

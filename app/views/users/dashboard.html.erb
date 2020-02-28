@@ -3,7 +3,7 @@
         <aside class="col-4 text-center">
             <div class="card mt-5" style="width: 18rem;">
                 <% if current_user.avatar.url %>
-                    <%= image_tag current_user.avatar.url, size: 52, class: "card-img" %>
+                    <%= image_tag current_user.avatar.url, size: 52, class: " text-center card-img" %>
                 <% else %>
                     <i class="fa fa-user bigicon"></i>
                 <% end %>
@@ -12,13 +12,35 @@
                     <p class="card-text"><%= current_user.following.count %> following　<%= current_user.followers.count %> followers
                 </div>
                 <div class="card-body p-3">
-                    <%= button_to "View my profile", current_user, class: "text-center btn btn-flat-simple-dash" %>
-                    <%= button_to "Edit profile", edit_user_path(current_user), class:"btn btn-flat-simple-dash mr-1" %>
+                    <%= link_to "View my profile", current_user, class: "text-center btn btn-flat-simple-dash" %>
+                    <%= link_to "Edit profile", edit_user_path(current_user), class:"btn btn-flat-simple-dash mr-1" %>
                 </div>
             </div>
         </aside>        
         <div class="col-8 mt-5">
             <h2>activity Feed</h2>
+            <% @activities.each do |activity| %>
+                <div class="media">
+                    <% if activity.user.avatar.url %>
+                        <%= image_tag activity.user.avatar.url, size: 52, class: "card-img text-center" %>
+                    <% else %>
+                        <i class="fa fa-user icon"></i>
+                    <% end %>
+                    <div class="media-body">
+                        <h5 class="mt-0">
+                            <%= link_to (current_user == activity.user ? "You" : activity.user.name), activity.user %>
+                            <% if activity.action_type == "Relationship" %>
+                                followed <%= activity.action.followed.name %>
+                            <% else %>
+                                learned <%= activity.action.result %> of <%= activity.action.words.count %> in <%= link_to activity.action.category.title, activity.action %>
+                            <% end %>
+                        </h5>
+                        <small class="text-muted">
+                            <%= time_ago_in_words(activity.created_at) %>
+                        </small>
+                    </div>
+                </div>
+            <% end %>
         </div>
     </div>
 </div>

@@ -5,6 +5,8 @@ class AnswersController < ApplicationController
     @answer = Answer.new
     if @lesson.next_word.nil?
       @lesson.update(result: @lesson.lesson_result)
+      @lesson.create_activity(user: current_user) #add later
+
       redirect_to lesson_url(@lesson) #in show page: @lesson.result
     end
   end

@@ -1,0 +1,286 @@
+@import "bootstrap";
+@import "font-awesome";
+
+.container{
+ font-family: 'Varela Round', sans-serif;
+}
+.navbar{
+  background-color: black;
+}
+
+.footer {
+  background-color: black;
+}
+
+.friends {
+  background: url(friends.jpeg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+}
+
+
+// signup //
+.signupgamen {
+  width: 50%;
+  background-color: rgba(211, 186, 150, 0.616);
+  padding : 20px
+}
+
+.signupbg {
+  background: url(friends.jpeg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+
+}
+
+.form {
+  margin: 20px;
+}
+
+.btnwidth {
+  width : 50px;
+}
+
+// login //
+.logingamen {
+  width: 50%;
+  background-color: rgba(188, 205, 231, 0.616);
+  padding : 20px
+}
+
+.loginbg {
+  background: url(login.jpeg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+
+}
+
+// edit //
+.editgamen {
+  width: 50%;
+  background-color: rgba(130, 119, 226, 0.616);
+  padding : 20px
+}
+
+.editbg {
+  background: url(edit.jpeg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+
+}
+
+// admin //
+.btn-flat-simple {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #ECECEC;
+  background: #000000;
+  transition: .4s;
+}
+
+.btn-flat-simple:hover {
+  background: #ECECEC;
+  color:  #000000;
+}
+
+.admingamen {
+  width: 450px;
+  padding : 20px;
+  font-family: 'Varela Round', sans-serif;
+  border-radius: 15px;
+  border : solid 3px;
+  border-color: #000000;  
+}
+
+.adminbg {
+  background: url(new.jpeg);
+  background-size: cover;
+  height: 95vh;
+  width: 100%;
+
+}
+
+.description{
+  height: 60px;
+}
+
+// index //
+.btn-flat-simple {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #ECECEC;
+  background: #000000;
+  transition: .4s;
+}
+
+.btn-flat-simple:hover {
+  background: #ECECEC;
+  color:  #000000;
+}
+
+.btn-flat-simple-answer {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.25em;
+  text-decoration: none;
+  color: #ECECEC;
+  background: #000000;
+  transition: .4s;
+  width: 500px;
+  height: 50px;
+  font-size: 25px;
+}
+
+.btn-flat-simple-answer:hover {
+  background: #ECECEC;
+  color:  #000000;
+}
+
+.indexgamen {
+  width: 450px;
+  height: 150px;
+  padding : 20px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.indexbg {
+  background: url(new.jpeg);
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+
+}
+
+// footer //
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+}
+
+// category table //
+.category_table {
+  border-color:white;
+  font-size: 20px;
+  width: 650px;
+  color: #ECECEC;
+}
+
+
+
+
+.wordbg {
+  background: url(new.jpeg);
+  background-size: cover;
+  height: 95vh;
+  width: 100%;
+
+}
+
+.wordgamen {
+  width: 450px;
+  height: 150px;
+  padding : 20px;
+  font-family: 'Varela Round', sans-serif;
+}
+
+.pagenate {
+  nav{
+  display : inline-block;
+  color: #000000;
+  }
+  
+}
+
+
+.pagenation {
+  color: #fff;
+  background-color: black;
+  border-color: black;
+
+}
+
+.card {
+  border: 3px solid rgba(0, 0, 0, 0.384);
+  border-radius: 0.8rem;
+}
+
+.answerpage {
+  margin-top: 7rem;
+}
+
+.answerpageback {
+  margin: 30px 200px 10px 200px;
+  background-color: rgba(167, 157, 157, 0.507);
+  padding: 3rem;
+  border: 3px solid rgba(0, 0, 0, 0.384);
+  border-radius: 0.8rem;
+}
+
+.category_table_result {
+  font-size: 20px;
+  width: 100%;
+  margin-top:2rem;
+}
+
+.title_result {
+  margin-top: 10rem;
+}
+
+.icon{
+  font-size: 40px;
+  padding: 5px;
+}
+
+.bigicon{
+  font-size: 100px;
+  padding: 5px;
+}
+
+.btn{
+  float: right;
+}
+
+.profire {
+  margin-top: 50px;
+  font-family: 'Varela Round', sans-serif;
+  border-radius: 15px;
+  border : solid 3px;
+  border-color: #000000;  
+}
+
+.btn-flat-simple-dash {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 0.25em 0.5em;
+  text-decoration: none;
+  color: #ECECEC;
+  background: #000000;
+  transition: .4s;
+}
+
+.btn-flat-simple-dash:hover {
+  background: #ECECEC;
+  color:  #000000;
+}
+
+.card-img {
+  width: 100px;
+  height:100px;
+  text-align: center;
+}

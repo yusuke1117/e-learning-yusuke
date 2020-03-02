@@ -1,0 +1,25 @@
+<div class="container-fluid pt-4">
+    <div class="container" style="width: 60%;">
+        <h1 class="text-center pt-5">Lesson</h1>
+        <div class="row">
+            <% @categories.each do |category| %>
+                <div class="col-6 mb-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= category.title %></h5>
+                            <p class="card-text"><%= category.description %></p>
+                        <!-- <div class="text-right"><a href="/answers/new" class="btn btn-flat-simple">Start Lesson</a></div> -->
+                        <% @lesson = current_user.took_lesson(category) %>
+                        <% if @lesson.nil? %>
+                            <%= button_to "Start Lesson", lessons_path(category_id: category.id), class:"btn btn-flat-simple" %>
+                        <% else %>
+                            <%= link_to "Show Result", lesson_path(@lesson), class:"btn btn-flat-simple" %>
+                        <% end %>
+                        </div>
+                    </div>
+                </div>
+            <% end %>
+        </div>
+        <div class="pagenate text-center"><%= will_paginate %></div>
+    </div>
+</div>

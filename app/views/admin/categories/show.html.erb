@@ -1,0 +1,31 @@
+<div class="container-fluid pt-4 adminbg">
+    <div class="d-flex align-content-center float-left flex-wrap  my-box-light" style="height: 40rem;">
+        <div class="container admingamen">
+            <h3 class="text-center">Word</h3>
+            <%= @category.title %>
+            <%= link_to "new word", new_admin_category_word_path(@category), class: "btn btn-block btn-flat-simple mt-4" %>
+        </div>
+    </div>    
+
+    <div class="d-flex float-center flex-wrap my-box-light pt-5" style="height: 16rem;">            
+        <table class="category_table table-responsive-md table-striped border border-dark">   
+            <thead>
+                <tr class="">
+                    <td>Word</td>
+                    <td>Answer</td>
+                    <td>Action</td>
+                </tr>
+            </thead>
+            <tbody>
+                <% @words.each do |word| %>
+                    <tr>
+                        <td><%= word.content %></td>
+                        <td><%= word.correct_answer %></td>
+                        <td><%= link_to "Edit", edit_admin_category_word_path(@category, word), class: "aaa" %>/
+                        <%= link_to 'Delete', admin_category_word_path(@category, word), method: :delete, data: { confirm: "Are you sure?" } %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>    

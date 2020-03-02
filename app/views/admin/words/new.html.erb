@@ -1,0 +1,15 @@
+<div class="container-fluid pt-5 wordbg text-white">
+    <div class="container pt-4 wordgamen text-white">
+        <%= form_for([:admin, @category, @word]) do |f| %>
+            <%= render "shared/error_messages", object: @word %>
+            <%= f.label :word %>
+            <%= f.text_field :content, class: "form-control" %>
+                <%= f.label :choices %>
+                <%= f.fields_for :choices do |choice| %>
+                    <%= choice.text_field :content, class: "form-control" %>
+                    <%= choice.check_box :is_correct %>
+                <% end %>
+                <%= f.submit "Save changes", class: "btn btn-block btn-flat-simple mt-4 btnwidth" %>
+        <% end %>
+    </div>
+</div>

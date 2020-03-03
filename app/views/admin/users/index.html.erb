@@ -15,7 +15,13 @@
                         <tr>
                             <td><%= user.name %></td>
                             <td><%= user.email %></td>
-                            <td><%= link_to "Add", "#", class: "btn btn-primary" %></td>
+                            <td>
+                                <% if user.is_admin? %>
+                                    <%= button_to "Remove", admin_user_path(user), method: :delete, class: "btn btn-secondary" %>
+                                <% else %>
+                                    <%= button_to "Add", admin_user_path(user), method: :patch, class: "btn btn-secondary" %>
+                                <% end %>
+                            </td>
                         </tr>
                     <% end %>
                 </tbody>

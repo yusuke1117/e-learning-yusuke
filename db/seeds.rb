@@ -8,6 +8,13 @@
 
 
 
+User.create!(
+    name: "Yusuke",
+    email: "yusuke@gmail.com",
+    password: "password",
+    is_admin: true
+)
+
 # creating many users
 50.times do |n|
     User.create(

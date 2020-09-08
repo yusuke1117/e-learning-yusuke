@@ -1,23 +1,21 @@
-<div class="container-fluid pt-4 editbg">
-    <div class="container editgamen text-white">
-        <h1 class="text-center text-white">Edit</h1>
-        <%= form_for @user do |f| %>
-            <%= f.label :name %>
-            <%= f.text_field :name, class: "form-control" %>
+<div class="container font-fix">
+    <h1 class="text-center">Edit</h1>
+    <%= form_for @user do |f| %>
+        <%= f.label :name %>
+        <%= f.text_field :name, class: "form-control" %>
 
-            <%= f.label :email %>
-            <%= f.text_field :email, class: "form-control"%>
+        <%= f.label :email %>
+        <%= f.text_field :email, class: "form-control"%>
 
-            <%= f.label :password %>
-            <%= f.password_field :password, class: "form-control"%>
+        <%= f.label :password %>
+        <%= f.password_field :password, class: "form-control"%>
 
-            <%= f.label :password_confirmation %>
-            <%= f.password_field :password_confirmation, class: "form-control"%>
+        <%= f.label :password_confirmation %>
+        <%= f.password_field :password_confirmation, class: "form-control"%>
 
-            <%= f.label :avatar %>
-            <%= f.file_field :avatar %>
+        <%= f.label :avatar %>
+        <%= f.file_field :avatar, class: "mt-2" %>
 
-            <%= f.submit "Save changes", class: "btn btn-block btn-primary mt-4 btnwidth" %>
-        <% end %>
-    </div>
+        <%= f.submit "Save changes", class: "btn btn-block btn-primary mt-4 btnwidth" %>
+    <% end %>
 </div>

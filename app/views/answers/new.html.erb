@@ -5,9 +5,13 @@
 
         <% @lesson.next_word.choices.each do |choice| %>
             <%= form_for ([@lesson, @answer]) do |f| %>
-                <%= f.hidden_field :word_id, value: choice.word_id %>
-                <%= f.hidden_field :choice_id, value: choice.id %>
-                <div class="text-center mt-3">
+                <div class="row">
+                    <%= f.hidden_field :word_id, value: choice.word_id %>
+                </div>
+                <div class="row">
+                    <%= f.hidden_field :choice_id, value: choice.id %>
+                </div>
+                <div class="row mt-3">
                     <%= f.submit choice.content, class:"btn btn-flat-simple-answer" %>
                 </div>
             <% end %>

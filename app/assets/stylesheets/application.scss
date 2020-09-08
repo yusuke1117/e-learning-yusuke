@@ -8,6 +8,14 @@
   background-color: black;
 }
 
+.emptybox {
+  margin-top: 6rem;
+}
+.title {
+  font-size: 6rem;
+  margin-top: 7rem;
+}
+
 .footer {
   background-color: black;
 }
@@ -17,23 +25,9 @@
   background-size: cover;
   height: 100vh;
   width: 100%;
+　position: fixed;
 }
 
-
-// signup //
-.signupgamen {
-  width: 50%;
-  background-color: rgba(211, 186, 150, 0.616);
-  padding : 20px
-}
-
-.signupbg {
-  background: url(friends.jpeg);
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-
-}
 
 .form {
   margin: 20px;
@@ -43,34 +37,11 @@
   width : 50px;
 }
 
-// login //
-.logingamen {
+// form //
+.font-fix {
   width: 50%;
-  background-color: rgba(188, 205, 231, 0.616);
-  padding : 20px
-}
-
-.loginbg {
-  background: url(login.jpeg);
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-
-}
-
-// edit //
-.editgamen {
-  width: 50%;
-  background-color: rgba(130, 119, 226, 0.616);
-  padding : 20px
-}
-
-.editbg {
-  background: url(edit.jpeg);
-  background-size: cover;
-  height: 100vh;
-  width: 100%;
-
+  padding: 20px;
+  margin-top: 6rem; 
 }
 
 // admin //
@@ -81,7 +52,7 @@
   padding: 0.25em 0.5em;
   text-decoration: none;
   color: #ECECEC;
-  background: #000000;
+  background: #72d469;
   transition: .4s;
 }
 
